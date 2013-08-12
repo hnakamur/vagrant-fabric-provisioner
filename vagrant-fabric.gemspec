@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = VagrantPlugins::Fabric::VERSION
   spec.platform      = Gem::Platform::RUBY
   spec.authors       = ["Takahiro Fujiwara"]
-  spec.email         = ["wutali.no@gmail.com"]
+  spec.email         = ["email@wuta.li"]
   spec.homepage      = "http://blog.wuta.li"
   spec.description   = "Enables Vagrant to provision with python fabric script."
   spec.summary       = "Enables Vagrant to provision with python fabric script."
