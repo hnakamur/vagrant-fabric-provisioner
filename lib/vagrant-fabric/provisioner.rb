@@ -16,10 +16,11 @@ module VagrantPlugins
             @machine.communicate.sudo("pip install fabric")
             @machine.env.ui.info "Finished to install fabric library your VM."
           end
-          @machine.communicate.execute("#{config.fabric_path} -f #{config.fabfile_path} " +
+          @machine.communicate.execute("cd #{config.remote_current_dir} && " +
+              "#{config.fabric_path} -f #{config.fabfile_path} " +
               "--user=#{user} --hosts=127.0.0.1 --password=#{config.remote_password} " +
               "#{config.tasks.join(' ')}")
-          @machine.env.ui.info"Finished to execute tasks of fabric."
+          @machine.env.ui.info "Finished to execute tasks of fabric."
         end
       end
     end

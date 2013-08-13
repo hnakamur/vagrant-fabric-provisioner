@@ -8,6 +8,7 @@ module VagrantPlugins
       attr_accessor :remote
       attr_accessor :remote_install
       attr_accessor :remote_password
+      attr_accessor :remote_current_dir
 
       def initialize
         @fabfile_path = UNSET_VALUE
@@ -17,6 +18,7 @@ module VagrantPlugins
         @remote = UNSET_VALUE
         @remote_install = UNSET_VALUE
         @remote_password = UNSET_VALUE
+        @remote_current_dir = UNSET_VALUE
       end
 
       def finalize!
@@ -27,6 +29,7 @@ module VagrantPlugins
         @remote = false if @remote == UNSET_VALUE
         @remote_install = false if @remote_install == UNSET_VALUE
         @remote_password = "vagrant" if @remote_password == UNSET_VALUE
+        @remote_current_dir = "." if @remote_current_dir == UNSET_VALUE
       end
 
       def execute(command)
