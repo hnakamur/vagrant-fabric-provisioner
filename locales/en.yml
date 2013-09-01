@@ -1,0 +1,14 @@
+en:
+  vagrant:
+    errors:
+      fabric_failed: |-
+        Ansible failed to complete successfully. Any error output should be
+        visible above. Please fix these errors and try again.
+      fabric_app_not_found: |-
+        The "fab" program could not be found! Please verify
+        that "fab" is available on the PATH of your host
+        system, and try again.
+
+        If you haven't installed Fabric yet, please install Fabric
+        on your system. Vagrant can't do this for you in a safe, automated
+        way. Please see fabfile.org for more info.
