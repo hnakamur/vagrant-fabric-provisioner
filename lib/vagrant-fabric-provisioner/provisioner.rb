@@ -29,7 +29,9 @@ module VagrantPlugins
           end
 
           raise Vagrant::Errors::FabricFailed if result.exit_code != 0
-        rescue Vagrant::Util::Subprocess::LaunchError
+        rescue Vagrant::Util::Subprocess::LaunchError,
+            Vagrant::Errors::CommandUnavailable,
+            Vagrant::Errors::CommandUnavailableWindows
           raise Vagrant::Errors::FabricAppNotFound
         end
       end
