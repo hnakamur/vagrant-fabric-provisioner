@@ -8,6 +8,8 @@ module VagrantPlugins
       description <<-DESC
       Provides support for provisioning your virtual machines with
       the Fabric fabfile.
+      Check https://github.com/hnakamur/vagrant-fabric-provisioner 
+      for further updates, or to make contributions.
       DESC
 
       config(:fabric, :provisioner) do
